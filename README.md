@@ -103,7 +103,7 @@ return [{ json: { ...$json, messages } }];
 The following function is used in our workflow to automatically determine whether the user intends to book a meeting, based on the AI assistant's response. It also extracts any meeting time information mentioned by the user.
 
 ```javascript
-// intentParser.js
+// Intent Checkr.js
 const rawContent =
   $json.content ||
   $json.text ||
