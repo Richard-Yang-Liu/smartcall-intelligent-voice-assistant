@@ -161,6 +161,30 @@ return [
 
 ```
 
+## Conversation Memory: Reading and Storing with PostgreSQL
+
+SmartCall uses PostgreSQL to store and retrieve user conversation history, making multi-turn, context-aware dialogue possible.
+
+### Read Memory (Retrieve Conversation History)
+
+```sql
+SELECT user_input, ai_response
+FROM conversation_history
+WHERE session_id = $1
+ORDER BY timestamp ASC
+LIMIT 5;
+
+
+```
+
+### Read Memory (Retrieve Conversation History)
+
+```sql
+INSERT INTO conversation_history (session_id, user_input, ai_response, timestamp)
+VALUES ($1, $2, $3, NOW());
+
+```
+
 ## Contact
 
 For further details or demo requests, please contact:  
