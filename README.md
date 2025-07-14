@@ -42,6 +42,7 @@ The following prompt template and logic are used in the SmartCall workflow to de
 
 ```javascript
 // prompt.js
+
 const inputMessages = $json.messages || [];
 const userInput = inputMessages[inputMessages.length - 1]?.content || "";
 
@@ -104,6 +105,7 @@ The following function is used in our workflow to automatically determine whethe
 
 ```javascript
 // Intent Checkr.js
+
 const rawContent =
   $json.content ||
   $json.text ||
@@ -127,6 +129,35 @@ return [{
     debug_intent: intent
   }
 }];
+
+```
+
+## Conversation Memory Management
+
+This function is used to capture and structure each session's user input and AI response, enabling persistent memory for multi-turn conversations.
+
+```javascript
+// memory.js
+
+const aiResponse = $json.content || "NO_AI_RESPONSE";
+const webhook = $items("Receive Text", 0)[0]?.json?.body || {};
+
+const sessionId = webhook.session_id || "NO_SESSION_ID";
+const userInput = webhook.text || "NO_USER_INPUT";
+
+console.log("sessionId:", sessionId);
+console.log("userInput:", userInput);
+console.log("aiResponse:", aiResponse);
+
+return [
+  {
+    json: {
+      session_id: sessionId,
+      user_input: userInput,
+      ai_response: aiResponse
+    }
+  }
+];
 
 ```
 
