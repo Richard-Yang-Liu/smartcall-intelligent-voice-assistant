@@ -177,7 +177,7 @@ LIMIT 5;
 
 ```
 
-### Read Memory (Retrieve Conversation History)
+### store Memory (Save Conversation Record)
 
 ```sql
 INSERT INTO conversation_history (session_id, user_input, ai_response, timestamp)
