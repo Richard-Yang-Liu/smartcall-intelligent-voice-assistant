@@ -27,7 +27,8 @@ SmartCall is a cloud-based intelligent voice assistant, integrating speech-to-te
 
 ## Demo / Source Code
 
-- [Demo video or slides available upon request]
+- <img width="1064" height="416" alt="image" src="https://github.com/user-attachments/assets/7e02fb6c-398b-42d8-a40b-131648f27db5" />
+
 - (Optional) Selected code snippets included below; full production code confidential.
 
 ## Contact
