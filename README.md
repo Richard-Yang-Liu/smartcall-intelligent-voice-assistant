@@ -27,8 +27,7 @@ SmartCall is a cloud-based intelligent voice assistant, integrating speech-to-te
 
 ## Demo / Source Code
 
-
-<img width="1064" height="416" alt="image" src="https://github.com/user-attachments/assets/7e02fb6c-398b-42d8-a40b-131648f27db5" />
+<img width="1056" height="424" alt="image" src="https://github.com/user-attachments/assets/620f94ef-9297-4545-8c78-b238717f1935" />
 
 We added some special features to make it smarter. For example:
 - It can tell if the user wants to book a meeting. 
