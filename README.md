@@ -36,9 +36,10 @@ We added some special features to make it smarter. For example:
 - It uses PostgreSQL to save data. You can update the prompt anytime. 
 - You can also switch between LLM models.
 
-## How Intent Recognition Works
+## Prompt Engineering for Intent Recognition
 
-Below is the key code snippet for intention recognition and conversational control in the SmartCall workflow:
+The following prompt template and logic are used in the SmartCall workflow to detect user intention and ensure clear, human-like conversation flow. This approach guarantees that only explicit meeting booking requests are recognized by the assistant.
+
 ```javascript
 // prompt.js
 const inputMessages = $json.messages || [];
