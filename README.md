@@ -80,10 +80,10 @@ Important:
 - You MUST rely only on the user's message — not your assumption.
 
 Examples:
-- User: "Can I book a meeting?" → [Intention: book_meeting]
-- User: "I'm confused." or "What does this mean?" → [Intention: other]
-- User: "That meeting was helpful." → [Intention: other]
-- User: "Can you help me arrange a time?" → [Intention: book_meeting]
+- User: "Can I book a meeting?" is [Intention: book_meeting]
+- User: "I'm confused." or "What does this mean?" is [Intention: other]
+- User: "That meeting was helpful." is [Intention: other]
+- User: "Can you help me arrange a time?" is [Intention: book_meeting]
 
 Only append one of these two tags at the end of your reply:
 → [Intention: book_meeting]  
