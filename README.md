@@ -98,6 +98,37 @@ return [{ json: { ...$json, messages } }];
 
 ```
 
+## Intent Detection and Meeting Time Extraction
+
+The following function is used in our workflow to automatically determine whether the user intends to book a meeting, based on the AI assistant's response. It also extracts any meeting time information mentioned by the user.
+
+```javascript
+// intentParser.js
+const rawContent =
+  $json.content ||
+  $json.text ||
+  $json.choices?.[0]?.message?.content ||
+  "";
+
+const cleaned = rawContent.replace(/\n/g, " ");
+const intentMatch = cleaned.match(/\[Intention:\s*(book_meeting|other)\]/i);
+const intent = intentMatch ? intentMatch[1].toLowerCase() : "other";
+const isBooking = intent === "book_meeting";
+
+const timeMatch = cleaned.match(/\w+ \d{1,2}(?:th|st|nd|rd)? at \d{1,2} ?(AM|PM)/i);
+const extracted_time = timeMatch ? new Date(timeMatch[0] + ", 2025").toISOString() : null;
+
+return [{
+  json: {
+    ...$json,
+    reply: rawContent,
+    isBooking,
+    extracted_time,
+    debug_intent: intent
+  }
+}];
+
+```
 
 ## Contact
 
