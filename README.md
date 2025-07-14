@@ -39,7 +39,7 @@ We added some special features to make it smarter. For example:
 ## How Intent Recognition Works
 
 Below is the key code snippet for intention recognition and conversational control in the SmartCall workflow:
-
+```javascript
 // prompt.js
 const inputMessages = $json.messages || [];
 const userInput = inputMessages[inputMessages.length - 1]?.content || "";
@@ -95,7 +95,7 @@ const messages = [
 
 return [{ json: { ...$json, messages } }];
 
-//
+```
 
 
 ## Contact
