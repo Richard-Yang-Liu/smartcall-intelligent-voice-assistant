@@ -1,7 +1,7 @@
 # SmartCall Intelligent Voice Assistant
 
 **Project Overview:**  
-SmartCall is a cloud-based intelligent voice assistant developed at Darwinik, integrating speech-to-text (STT), large language models (LLM), text-to-speech (TTS), and PostgreSQL for memory management and personalized user experience. Built with n8n for automated business workflow orchestration.
+SmartCall is a cloud-based intelligent voice assistant, integrating speech-to-text (STT), large language models (LLM), text-to-speech (TTS), and PostgreSQL for memory management and personalized user experience. Built with n8n for automated business workflow orchestration.
 
 ## Key Features
 
