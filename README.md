@@ -190,4 +190,4 @@ VALUES ($1, $2, $3, NOW());
 ## Contact
 
 For further details or demo requests, please contact:  
-richard.yang0824@gmail.com
+[richard.yang0824@gmail.com](mailto:richard.yang0824@gmail.com)
