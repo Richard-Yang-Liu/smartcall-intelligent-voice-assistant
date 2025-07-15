@@ -174,6 +174,8 @@ ORDER BY timestamp ASC
 LIMIT 5;
 
 ```
+- Retrieves the latest 5 user and AI responses for the current session.
+
 
 ### store Memory (Save Conversation Record)
 
@@ -182,6 +184,8 @@ INSERT INTO conversation_history (session_id, user_input, ai_response, timestamp
 VALUES ($1, $2, $3, NOW());
 
 ```
+- Saves every user input and AI reply to the database for future retrieval.
+
 
 ## Contact
 
