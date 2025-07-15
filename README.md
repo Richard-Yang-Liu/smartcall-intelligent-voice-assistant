@@ -173,7 +173,6 @@ WHERE session_id = $1
 ORDER BY timestamp ASC
 LIMIT 5;
 
-
 ```
 
 ### store Memory (Save Conversation Record)
@@ -187,5 +186,4 @@ VALUES ($1, $2, $3, NOW());
 ## Contact
 
 For further details or demo requests, please contact:  
-[Your Email]
-
+richard.yang0824@gmail.com
